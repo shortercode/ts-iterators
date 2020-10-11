@@ -1,0 +1,29 @@
+{
+  "name": "ts-iterators",
+  "version": "1.0.0",
+  "description": "Collection of functions that add array like methods for iterators",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "build": "tsc",
+    "lint": "eslint src/*"
+  },
+  "keywords": [
+    "typescript",
+    "iterators",
+    "javascript",
+    "ts",
+    "js"
+  ],
+  "author": "Iain Shorter <iainshorter@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^26.0.9",
+    "@typescript-eslint/eslint-plugin": "^3.9.0",
+    "@typescript-eslint/parser": "^3.9.0",
+    "eslint": "^7.6.0",
+    "jest": "^26.3.0",
+    "ts-jest": "^26.1.4",
+    "typescript": "^3.9.7"
+  }
+}

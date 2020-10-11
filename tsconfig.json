@@ -1,0 +1,22 @@
+{
+	"compilerOptions": {
+		"declaration": true,
+		"outDir": "./dist",
+		"removeComments": true,
+		"target": "es2019",
+		"strict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"forceConsistentCasingInFileNames": true,
+		"esModuleInterop": true,
+		"moduleResolution": "node"
+	},
+	"include": [
+		"./src"
+	],
+	"exclude": [
+		"**/*.test.ts"
+	]
+}
