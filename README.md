@@ -1,3 +1,4 @@
+![Test](https://github.com/shortercode/ts-iterators/workflows/Test/badge.svg)
 # ts-iterators
 
 Ever been frustrated that you can't sort a `Set`, or get the first 10 elements in a `Map`? Well now you can! TS iterators offers a comprehensive collection of functions that operate on any `Iterable` values, and return `Iterable`s in turn. This includes all the common JS `Array` methods; such as `map`, `sort`, `reduce` and `slice`! Some additional ones inspired by Rust, and a few new ones.
