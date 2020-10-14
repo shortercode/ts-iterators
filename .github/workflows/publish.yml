@@ -19,7 +19,7 @@ jobs:
       - run: npm run build
       - run: npm test
       - name: Dist artifact
-        uses: actions/upload-artifcact@v2
+        uses: actions/upload-artifact@v2
         with:
           name: dist
           path: |
