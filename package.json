@@ -1,13 +1,13 @@
 {
   "name": "ts-iterators",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Collection of functions that add array like methods for iterators",
   "main": "cjs/index.js",
   "module": "mjs/index.mjs",
   "types": "mjs/index.d.ts",
   "scripts": {
     "test": "jest --verbose --coverage",
-		"build": "rollup -c && cp ./package.json ./dist/package.json",
+		"build": "rollup -c && cp ./package.json ./dist/package.json && cp ./README.md ./dist/README.md",
     "lint": "eslint src/*"
   },
   "keywords": [
