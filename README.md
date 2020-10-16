@@ -26,6 +26,31 @@ let inverse: Iterable<string> = map(even, (v: number) => `${v} = ${1 / v}`)
 console.log(join(inverse, '\n'))
 ```
 
+## Common gotcha
+
+```typescript
+import { map } from 'ts-iterators'
+map([1, 2, 3], console.log);
+```
+
+At first glance the above code looks perfectly correct. However, it doesn't log anything. Why is that? The answer is that `map` is an operator, not a consumer. Hence it does not consume it's source when used but rather creates a new source that _can_ be consumed, which in turn consumes it's source. An easy way to consume an iterator is by using the spread operator like so.
+
+```typescript
+import { map } from 'ts-iterators'
+const incremented = map([1, 2, 3], v => v + 1);
+console.log(...incremented); // 2, 3, 4
+```
+
+It's not uncommon to use `Array.map` to iterate over a map and then not use the new array it creates, mainly because it's more succinct than `Array.forEach`. But in the case of iterators the difference is a bit more stark, as the function isn't called *unless you use the return value*. You can just use forEach instead though:
+
+```typescript
+import { forEach } from 'ts-iterators'
+forEach([1, 2, 3], console.log);
+// 1
+// 2
+// 3
+```
+
 ## Sources
 A source creates a new iterable value based on a set of parameters.
 
